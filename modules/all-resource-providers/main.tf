@@ -13,7 +13,7 @@ module "quotas" {
   for_each = local.valid_resource_providers_map
 
   source            = "../../"
-  location          = "westus3"
+  location          = var.location
   resource_provider = each.key
 
 }
