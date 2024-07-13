@@ -1,16 +1,16 @@
 locals {
-  valid_resource_providers = [
+  resource_providers = [
     "Microsoft.Compute",
     "Microsoft.Network",
     "Microsoft.Storage",
     "Microsoft.Web",
   ]
-  valid_resource_providers_map = { for idx, rp in local.valid_resource_providers : rp => idx }
+  valid_resource_providers = { for i, o in local.resource_providers : o => i }
 }
 
-module "quotas" {
+module "resource_provider" {
 
-  for_each = local.valid_resource_providers_map
+  for_each = local.valid_resource_providers
 
   source            = "../../"
   location          = var.location

@@ -19,3 +19,6 @@ output "available_names" {
 output "unavailable_names" {
   value = [for q in local.quotas_map : q.name if q.limit == 0]
 }
+output "resource_provider" {
+  value = var.resource_provider
+}

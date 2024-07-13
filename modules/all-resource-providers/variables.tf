@@ -1,3 +1,6 @@
 variable "location" {
-  type = string
+  type        = string
+  description = <<DESCRIPTION
+  The Azure region for which to retrieve the Quota.
+  DESCRIPTION
 }
