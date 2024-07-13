@@ -11,7 +11,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_quotas"></a> [quotas](#module\_quotas) | ../../modules/all-quota-for-region | n/a |
+| <a name="module_quotas"></a> [quotas](#module\_quotas) | ../../modules/all-resource-providers | n/a |
 
 ## Resources
 

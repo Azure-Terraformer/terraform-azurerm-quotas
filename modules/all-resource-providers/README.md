@@ -16,7 +16,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_quotas"></a> [quotas](#module\_quotas) | ../../ | n/a |
+| <a name="module_resource_provider"></a> [resource\_provider](#module\_resource\_provider) | ../../ | n/a |
 
 ## Resources
 
@@ -26,11 +26,16 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_location"></a> [location](#input\_location) | n/a | `string` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | The Azure region for which to retrieve the Quota. | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_all"></a> [all](#output\_all) | n/a |
+| <a name="output_all_names"></a> [all\_names](#output\_all\_names) | n/a |
+| <a name="output_available"></a> [available](#output\_available) | n/a |
+| <a name="output_available_names"></a> [available\_names](#output\_available\_names) | n/a |
+| <a name="output_unavailable"></a> [unavailable](#output\_unavailable) | n/a |
+| <a name="output_unavailable_names"></a> [unavailable\_names](#output\_unavailable\_names) | n/a |
 <!-- END_TF_DOCS -->
