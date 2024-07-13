@@ -3,12 +3,11 @@ resource "azurerm_resource_provider_registration" "quotas" {
 }
 
 module "quotas" {
-  source   = "../../"
-  location = "westus3"
-
-  depends_on = [azurerm_resource_provider_registration.quotas]
+  source            = "../../"
+  location          = "westus3"
+  resource_provider = "Microsoft.Compute"
 }
 
 output "result" {
-  value = module.quotas.available_names
+  value = module.quotas.all
 }
