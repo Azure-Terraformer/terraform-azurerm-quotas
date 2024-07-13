@@ -3,9 +3,9 @@ resource "azurerm_resource_provider_registration" "quotas" {
 }
 
 module "quotas" {
-  source            = "../../"
-  location          = "westus3"
-  resource_provider = "Microsoft.Compute"
+  source   = "Azure-Terraformer/quotas/azurerm"
+  version  = "1.0.0"
+  location = "westus3"
 }
 
 output "result" {

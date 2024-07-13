@@ -1,15 +1,21 @@
 output "result" {
   value = data.azapi_resource_action.quotas.output
 }
+output "all" {
+  value = [for q in local.quotas_map : q]
+}
 output "available" {
-  value = { for x, y in local.quotas_map : x => y if y > 0 }
+  value = [for q in local.quotas_map : q if q.limit > 0]
 }
 output "unavailable" {
-  value = { for x, y in local.quotas_map : x => y if y == 0 }
+  value = [for q in local.quotas_map : q if q.limit == 0]
+}
+output "all_names" {
+  value = [for q in local.quotas_map : q.name]
 }
 output "available_names" {
-  value = [for x, y in local.quotas_map : x if y > 0]
+  value = [for q in local.quotas_map : q.name if q.limit > 0]
 }
 output "unavailable_names" {
-  value = [for x, y in local.quotas_map : x if y == 0]
+  value = [for q in local.quotas_map : q.name if q.limit == 0]
 }
