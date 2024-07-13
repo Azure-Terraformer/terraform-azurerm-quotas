@@ -1,3 +1,4 @@
+The `all-resource-providers` module provides an easy way to retrieve quota information for all supported Azure Resource Providers within a specified Azure region.
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
