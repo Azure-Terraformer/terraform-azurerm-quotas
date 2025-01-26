@@ -9,7 +9,7 @@ data "azapi_resource_action" "quotas" {
 }
 
 locals {
-  quotas_response = jsondecode(data.azapi_resource_action.quotas.output).value
+  quotas_response = jsondecode(data.azapi_resource_action.quotas.output.value)
   quotas_map = [for quota in local.quotas_response :
     {
       name              = quota.name,
